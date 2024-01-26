@@ -1,16 +1,6 @@
-const Home = () => {
-  return (
-    <>
-      <header>HEADER</header>
+import Hero from 'components/hero'
 
-      <main>
-        <div>
-          <h1>CUBE</h1>
-          <p>アウトプットしていくサイト</p>
-        </div>
-      </main>
-      <footer>FOOTER</footer>
-    </>
-  )
+const Home = () => {
+  return <Hero title='CUBE' subtitle='アウトプットしていくサイト' imageOn />
 }
 export default Home
