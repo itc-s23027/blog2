@@ -1,14 +1,13 @@
+import Meta from 'components/meta'
 import Container from 'components/container'
 import Hero from 'components/hero'
-const props = { title: 'Blog', subtitle: 'Recent Posts' }
-const Home = () => {
+const Blog = () => {
   return (
     <Container>
-    <>
-      <Hero {...props} />
-    </>
+      <Meta pageTitle='ブログ' pageDesc='ブログの記事一覧' />
+      <Hero title='Blog' subtitle='Recent Posts' />
     </Container>
   )
 }
-
-export default Home
+export default Blog
+//  117
