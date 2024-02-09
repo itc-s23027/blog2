@@ -4,15 +4,16 @@ import Container from 'components/container'
 const Schedule = ({ title, publish, content, eyecatch, categories }) => {
   return (
     <Container>
-      <h1>{title}</h1>
+      <h1>記事のタイトル</h1>
     </Container>
   )
 }
+export default Schedule
 
 export async function getStaticProps () {
   const slug = 'schedule'
-  const post = await getPostBySlug(slug)
 
+  const post = await getPostBySlug(slug)
   return {
     props: {
       title: post.title,
@@ -23,5 +24,3 @@ export async function getStaticProps () {
     }
   }
 }
-
-export default Schedule
