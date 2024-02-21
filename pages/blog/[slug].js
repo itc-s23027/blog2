@@ -72,7 +72,8 @@ const Schedule = ({
   )
 }
 
-export async function getStaticPaths () {
+const getStaticPaths = async () => {
+  // export async function getStaticPaths () {
   const allSlugs = await getAllSlugs()
   return {
     paths: allSlugs.map(({ slug }) => `/blog/${slug}`),
@@ -80,7 +81,8 @@ export async function getStaticPaths () {
   }
 }
 
-export async function getStaticProps (context) {
+const getStaticProps = async context => {
+  // export async function getStaticProps (context) {
   const slug = context.params.slug
   const post = await getPostBySlug(slug)
   const description = extractText(post.content)
@@ -105,3 +107,4 @@ export async function getStaticProps (context) {
 }
 
 export default Schedule
+export { getStaticPaths, getStaticProps }
